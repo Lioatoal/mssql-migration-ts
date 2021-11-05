@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "experimentalDecorators": true,
+      "lib": [
+          "es6"
+      ],
+      "sourceMap": true,
+      "target": "es6",
+      "outDir": "./dist",
+      "baseUrl": "./",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "resolveJsonModule": true
+  },
+  "include": [
+      "*.ts"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}

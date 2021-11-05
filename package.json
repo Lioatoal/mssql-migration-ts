@@ -1,0 +1,46 @@
+{
+  "name": "bk-structure-ts",
+  "version": "1.0.0",
+  "description": "bakcend structure, using typescript to create",
+  "main": "server.ts",
+  "scripts": {
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./server.ts",
+    "test": "jest",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate-undo": "npx sequelize-cli db:migrate:undo",
+    "migrate-undo-all": "npx sequelize-cli db:migrate:undo:all"
+  },
+  "keywords": [
+    "koa-ts",
+    "koa",
+    "koa2"
+  ],
+  "author": "Roy Shen",
+  "license": "MTI",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@types/koa__cors": "^3.0.3",
+    "abort-controller": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-compose": "^4.1.0",
+    "koa-router": "^10.1.1",
+    "log4js": "^6.3.0",
+    "node-fetch": "^3.0.0",
+    "sequelize": "^6.8.0",
+    "tedious": "^14.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/koa-bodyparser": "^4.3.3",
+    "@types/koa-cors": "0.0.2",
+    "@types/koa-router": "^7.4.4",
+    "@types/node-fetch": "^3.0.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.1.0",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
