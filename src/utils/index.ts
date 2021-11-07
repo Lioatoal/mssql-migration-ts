@@ -1,5 +1,5 @@
-import * as request from './request'
+import * as socketIO from './socketIO'
 
 export default {
-  request,
+  socketIO,
 }

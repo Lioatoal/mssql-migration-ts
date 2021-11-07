@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./server.ts",
     "test": "jest",
+    "lint": "eslint src/*.js src/**/*.js --fix",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate-undo": "npx sequelize-cli db:migrate:undo",
     "migrate-undo-all": "npx sequelize-cli db:migrate:undo:all"
@@ -29,6 +30,7 @@
     "log4js": "^6.3.0",
     "node-fetch": "^3.0.0",
     "sequelize": "^6.8.0",
+    "socket.io": "^4.3.1",
     "tedious": "^14.0.0",
     "uuid": "^8.3.2"
   },
