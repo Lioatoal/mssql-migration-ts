@@ -1,22 +1,27 @@
-import { v4 as uuidv4 } from 'uuid';
+import log4js from 'log4js'
 
-import errorCode from '../../errorCode.json'
+import errorConfig from '../../config/errorConfig'
 
 export default async (ctx, next) => {
+  //throw error example
+  //ctx.throw({code: 'E40100', log: 'api', message: 'URL: /login - Error: username or password is required'})
+
   try { await next() } 
   catch (err) {
-    ctx.status = err.status || 500
-
-    if (ctx.status === 404) {
+    const { code, log, message } = err
+    const { eid, error, data, status } = errorConfig[code] || errorConfig['E50000']
+    
+    log4js.getLogger(log ? log : 'default').error(`Eid: ${eid} - ${message || data}`)
+    
+    ctx.status = status || 500
+    if (err.status === 404) {
       ctx.body = '404 Not Found'
     } else {
-      const { type, error, data} = errorCode[err.message]
       ctx.body = {
-        eid: uuidv4(),
-        success: false,
-        type,
-        error,
+        eid, 
+        error, 
         data,
+        success: false,
       }
     }
   }
