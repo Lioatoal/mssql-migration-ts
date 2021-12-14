@@ -1,5 +1,5 @@
-# Koa2-mssql-migration-ts
- a backend structure using koa2 and typescript
+# mssql-migration-ts
+ a migration tool mssql, sequelize and typescript
 
 ## Required
 
