@@ -11,20 +11,10 @@ Nodejs >= 14.4.0 (Using async/await)
 ### command
 
 ```bash
-# copy to config.js
-cp src/config.js.example src/config.js
-
-# eslint
-npm run lint
-
-# test
-npm run test
+# init.
+npm install
 
 # migration
 npm run migrate
 npm run migrate-undo
 npm run migrate-undo-all
-
-# run as production (pm2)
-npm start
-```

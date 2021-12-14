@@ -6,6 +6,5 @@ require('dotenv').config({path: './config.env'})
 module.exports = {
   'env': 'local',
   'config': path.resolve('config', 'migraConfig.js'),
-  // 'seeders-path': path.resolve('seeders'),
   'migrations-path': path.resolve('migrations')
 };

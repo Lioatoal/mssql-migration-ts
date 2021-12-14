@@ -16,56 +16,5 @@ module.exports = {
         }
       },
       "logging": true
-    },
-    "development": {
-      "username": "roy",
-      "password": "roy",
-      "database": "hc-cmk",
-      "host": "localhost",
-      "dialect": "mssql",
-      "operatorsAliases": false,
-      "encrypt": true,
-      "dialectOptions": {
-        "encrypt": true,
-        "options": {
-          "encrypt": true,
-          "requestTimeout": 450000,
-        }
-      },
-      "logging": true
-    },
-    "stage": {
-      "username": "roy",
-      "password": "roy",
-      "database": "hc-cmk",
-      "host": "T-ROYSHEN",
-      "dialect": "mssql",
-      "operatorsAliases": false,
-      "encrypt": true,
-      "dialectOptions": {
-        "encrypt": true,
-        "options": {
-          "encrypt": true,
-          "requestTimeout": 450000,
-        }
-      },
-      "logging": true
-    },
-    "production": {
-      "username": "roy",
-      "password": "roy",
-      "database": "hc-cmk",
-      "host": "T-ROYSHEN",
-      "dialect": "mssql",
-      "operatorsAliases": false,
-      "encrypt": true,
-      "dialectOptions": {
-        "encrypt": true,
-        "options": {
-          "encrypt": true,
-          "requestTimeout": 450000,
-        }
-      },
-      "logging": true
-    },
+    }
   }
