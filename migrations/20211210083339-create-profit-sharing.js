@@ -6,15 +6,15 @@ module.exports = {
       Id: {
         autoIncrement: true,
         primaryKey: true,        
-        type: Sequelize.BIGINT,
+        type: 'bigint',
         allowNull: false,
       },
       VenderId: {
-        type: Sequelize.BIGINT,
+        type: 'bigint',
         allowNull: false,
       },
       PlanId: {
-        type: Sequelize.BIGINT,
+        type: 'bigint',
         allowNull: false,
       },
       SDate: {

@@ -7,11 +7,11 @@ module.exports = {
         Id: {
           autoIncrement: true,
           primaryKey: true,
-          type: Sequelize.BIGINT,
+          type: 'bigint',
           allowNull: false,
         },
         RuleId: {
-          type: Sequelize.BIGINT,
+          type: 'bigint',
           allowNull: false,
         },
         Name: {
@@ -42,10 +42,6 @@ module.exports = {
           type: Sequelize.STRING(128),
         },
         HasDispatchFee:{
-          type: Sequelize.BOOLEAN,
-          defaultValue: true,
-        },
-        Status:{
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
