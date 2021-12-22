@@ -7,15 +7,15 @@ module.exports = {
         Id: {
           autoIncrement: true,
           primaryKey: true,
-          type: 'bigint',
+          type: 'int',
           allowNull: false,
         },
         RuleId: {
-          type: 'bigint',
+          type: 'int',
           allowNull: false,
         },
         Name: {
-          type: 'nvarchar(64)',
+          type: Sequelize.STRING(64),
           allowNull: false,
         },
         Status: {
@@ -23,40 +23,46 @@ module.exports = {
           allowNull: false,
         },
         TaxId: {
-          type: Sequelize.STRING(32),
+          type: 'varchar(32)',
           allowNull: false,
         },
         Principal: {
-          type: 'nvarchar(32)',
+          type: Sequelize.STRING(32),
+          defaultValue: '',
         },
         Address: {
-          type: 'nvarchar(128)',
+          type: Sequelize.STRING(128),
+          defaultValue: '',
         },
         Contact: {
-          type: 'nvarchar(32)',
+          type: Sequelize.STRING(32),
+          defaultValue: '',
         },
         Telephone: {
-          type: Sequelize.STRING(32),
+          type: 'varchar(32)',
+          defaultValue: '',
         },
         Email: {
-          type: Sequelize.STRING(128),
+          type: 'varchar(128)',
+          defaultValue: '',
         },
         HasDispatchFee:{
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
         CreateUser: {
-          type: 'nvarchar(128)',
+          type: Sequelize.STRING(128),
           allowNull: false,
         },
-        CreateDate: {
+        CreateTime: {
           type: 'datetime',
           allowNull: false,
+          defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         UpdateUser: {
-          type: 'nvarchar(128)',
+          type: Sequelize.STRING(128),
         },
-        UpdateDate: {
+        UpdateTime: {
           type: 'datetime',
         },
         IsDeleted: {

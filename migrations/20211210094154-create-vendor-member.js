@@ -6,15 +6,15 @@ module.exports = {
       Id: {
         autoIncrement: true,
         primaryKey: true,        
-        type: 'bigint',
+        type: 'int',
         allowNull: false,
       },
-      VenderId: {
-        type: 'bigint',
+      VendorId: {
+        type: 'int',
         allowNull: false,
       },
       MemberId: {
-        type: 'bigint',
+        type: 'int',
         allowNull: false,
       },
       MemberIdType: {
@@ -22,17 +22,18 @@ module.exports = {
         allowNull: false,
       },
       CreateUser: {
-        type: 'nvarchar(128)',
+        type: Sequelize.STRING(128),
         allowNull: false,
       },
-      CreateDate: {
+      CreateTime: {
         type: 'datetime',
         allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
       UpdateUser: {
-        type: 'nvarchar(128)',
+        type: Sequelize.STRING(128),
       },
-      UpdateDate: {
+      UpdateTime: {
         type: 'datetime',
       },
       IsDeleted: {
