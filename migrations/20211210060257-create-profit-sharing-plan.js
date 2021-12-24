@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('AmountPlan', {
+    return queryInterface.createTable('ProfitSharingPlan', {
       Id: {
         autoIncrement: true,
         primaryKey: true,        
@@ -23,11 +23,11 @@ module.exports = {
       },
       TeamFee: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        defaultValue: 0,
       },
       SendAmount: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        defaultValue: 0,
       },
       CreateUser: {
         type: Sequelize.STRING(128),
@@ -52,6 +52,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('AmountPlan');
+    return queryInterface.dropTable('ProfitSharingPlan');
   }
 };
